@@ -137,6 +137,7 @@ DECRBYFLOAT compras:25-05-2015:valor 0.50
 SETBIT acesso:25-05-2015 15 1
 (integer) 0
 ```
+
 ## Lendo uma chave de _bit_
 ```
 GETBIT acesso:25-05-2015 15
@@ -150,13 +151,13 @@ BITCOUNT acesso:25-05-2015
 
 > uma chave armazenando bits de duas chaves
 
-```
 ## Inserindo um operador de AND
+```
 BITOP AND acesso:25-e-26-05-2015 acesso:25-05-2015 acesso:26-05-2015
 ```
 
-```
 ## Inserindo um operador de OR
+```
 BITOP OR acesso:25-ou-26-05-2015 acesso:25-05-2015 acesso:26-05-2015
 ```
 # Adicional do aprendizado
