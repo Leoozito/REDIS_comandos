@@ -159,5 +159,6 @@ BITOP AND acesso:25-e-26-05-2015 acesso:25-05-2015 acesso:26-05-2015
 BITOP OR acesso:25-ou-26-05-2015 acesso:25-05-2015 acesso:26-05-2015
 ```
 > uma chave armazenando bits de duas chaves
+
 # Adicional do aprendizado
 Tudo que armazenamos no redis, são valores cacheados, por isso o recomendado é ter um BD armazenando dados, processar os dados e armazenar os dados no REDIS, para que seja rapida a pesquisa.
