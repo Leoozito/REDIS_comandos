@@ -96,6 +96,6 @@ SINTER "relacionamento:leonardo" "relacionamento:yasmin"
 SUNION "relacionamento:leonardo" "relacionamento:yasmin"
 ```
 
-# Diferença da lista e do conjunto
+# Diferença da lista e conjunto
 
 > Quando utilizamos conjuntos, não conseguimos recuperar um elemento em um determinado índice, pois não temos garantia de que a ordem dos valores será mantida. Outra diferença em relação as listas, é que conjuntos não permitem elementos repetidos.
