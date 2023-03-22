@@ -1,3 +1,5 @@
+# LISTA
+
 ## Colocar um elemento em uma lista
 > L de left
 ```
@@ -48,6 +50,7 @@ Sendo assim ele espera 30 segundos para avisar que chegou por exemplo um email. 
 ```
 BLPOP fila:confirma-email 0
 ```
+# CONJUNTOS
 
 ## Fazer conjuntos
 
@@ -99,3 +102,66 @@ SUNION "relacionamento:leonardo" "relacionamento:yasmin"
 # Diferença da lista e conjunto
 
 > Quando utilizamos conjuntos, não conseguimos recuperar um elemento em um determinado índice, pois não temos garantia de que a ordem dos valores será mantida. Outra diferença em relação as listas, é que conjuntos não permitem elementos repetidos.
+
+# CONJUNTO ORDENADO
+
+# Fazer um conjunto ordenado
+
+```
+ZADD pontuacoes 50076 guilherme
+```
+
+> Primeiro o nome do conjunto (pontuacoes) e a informação que vamos ordernar (50076)
+
+# Saber quantos elementos tem no conjunto ordenado
+
+```
+ZCARD pontuacoes
+```
+
+# Chamar todos os elementos do conjunto
+## de forma do menor pro maior 
+```
+ZRANGE pontuacoes 0 3
+```
+
+## de forma do maior pro menor
+```
+ZREVRANGE pontuacoes 0 3
+```
+
+## argumento novo que pode ser passado para saber -> o que o conjunto guarda
+```
+ZREVRANGE pontuacoes 0 3 WITHSCORES
+```
+> Para trazer do primeiro até o ultimo conjunto !! e tornar atomico a busca de conjunto, só usar o " -1 "
+```
+ZREVRANGE pontuacoes 0 -1 WITHSCORES
+```
+
+## Saber em que posição está o conjunto
+```
+ZRANK pontuacoes guilherme
+```
+
+```
+ZREVRANK pontuacoes guilherme
+```
+## Incrementar no conjunto ordenado
+```
+ZINCRBY pontuacoes 5000 guilherme 
+```
+
+> É importante que, junto dos nossos comandos , não usar o nome, ou seja, armazenar nomes, mas sim, armazenar id´s.
+```
+ZADD pontuacoes 50076 10
+```
+
+# descobrir a quantidade de pontos de um elemento
+
+```
+ZSCORE pontuacoes paulo
+```
+
+*Quando usar na pratica com base no que foi ensinado*
+ Ele serve para criar uma fila de processamento de dados, fila de geração de relatorios, rank de usuarios ou de tarefas, fila de prioridades, ultimas noticias que quero cachear, redes sociais, usar operações bit a bit para saber quantos usuarios acessaram o sistema. 

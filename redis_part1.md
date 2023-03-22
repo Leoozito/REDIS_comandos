@@ -127,6 +127,9 @@ DECRBY compras:25-05-2015:valor 2
 INCRBYFLOAT compras:25-05-2015:valor 10.50 
 "42.5"
 ```
+
+## Para incrementar um hash
+HINCRBY "jogador:1" "pontos" 10
 ## Decrementar uma chave com valores float (no exemplo 0.50)
 ```
 DECRBYFLOAT compras:25-05-2015:valor 0.50 
